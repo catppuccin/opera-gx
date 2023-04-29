@@ -39,6 +39,13 @@
 ### GX Store
 1. Download the from the [gx store](https://store.gx.me/mods/)
 
+### Release install (intermediate)
+1. Clone the repo
+2. Go to `opera://extensions`
+3. Enable `Developer mode`
+4. Click `Load unpacked`
+5. Select the `gxmods` folder from the repo
+
 ## 💝 Thanks to
 
 - [Isabel Roses](https://github.com/isabelroses)
