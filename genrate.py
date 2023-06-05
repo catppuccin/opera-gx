@@ -47,12 +47,12 @@ def generate_themes():
                     "payload": {
                         "theme": {
                             "dark": {
-                                "gx_accent": hex_to_hsl(getattr(flavour, accent).hex),
-                                "gx_secondary_base": hex_to_hsl(flavour.base.hex)
+                                "gx_accent": rgb_to_hsl(getattr(flavour, accent).rgb),
+                                "gx_secondary_base": rgb_to_hsl(flavour.base.rgb)
                             },
                             "light": {
-                                "gx_accent": hex_to_hsl(getattr(Flavour.latte(), accent).hex),
-                                "gx_secondary_base": hex_to_hsl(Flavour.latte().base.hex)
+                                "gx_accent": rgb_to_hsl(getattr(Flavour.latte(), accent).rgb),
+                                "gx_secondary_base": rgb_to_hsl(Flavour.latte().base.rgb)
                             }
                         },
                         "wallpaper": {
@@ -81,11 +81,35 @@ def generate_themes():
 
     return files
 
-def hex_to_hsl(hex):
-    """Convert hex to hsl"""
-    h = int(hex[0:2], 16)
-    s = int(hex[2:4], 16)
-    l = int(hex[4:6], 16)
+def rgb_to_hsl(rgb):
+    """Convert rbg to hsl"""
+    r = rgb[0] / 255
+    g = rgb[1] / 255
+    b = rgb[2] / 255
+    cmin = min(r,g,b)
+    cmax = max(r,g,b)
+    delta = cmax - cmin
+    h = 0
+    s = 0
+    l = 0
+    if (delta == 0):
+        h = 0
+    elif (cmax == r):
+        h = ((g - b) / delta) % 6
+    elif (cmax == g):
+        h = (b - r) / delta + 2
+    else:
+        h = (r - g) / delta + 4
+    h = round(h * 60)
+    if (h < 0):
+        h += 360
+    l = (cmax + cmin) / 2
+    if (delta == 0):
+        s = 0
+    else:
+        s = delta / (1 - abs(2 * l - 1))
+    s = round(+(s * 100))
+    l = round(+(l * 100))
     return {"h": h, "s": s, "l": l}
 
 def write():
