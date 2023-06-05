@@ -70,7 +70,7 @@ def generate_themes():
                     }
                 }
             }
-            theme_file = "mainifest.json"
+            theme_file = "manifest.json"
             theme_path = os.path.join("dist", theme, accent, theme_file)
 
             if theme not in files:
