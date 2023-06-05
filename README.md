@@ -12,26 +12,26 @@
 </p>
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/preview.webp"/>
+	<img src="assets/res.webp"/>
 </p>
 
 ## Previews
 
 <details>
 <summary>🌻 Latte</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/latte.webp"/>
+<img src="assets/latte.webp"/>
 </details>
 <details>
 <summary>🪴 Frappé</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/frappe.webp"/>
+<img src="assets/frappe.webp"/>
 </details>
 <details>
 <summary>🌺 Macchiato</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/macchiato.webp"/>
+<img src="assets/macchiato.webp"/>
 </details>
 <details>
 <summary>🌿 Mocha</summary>
-<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/previews/mocha.webp"/>
+<img src="assets/mocha.webp"/>
 </details>
 
 ## Usage
@@ -41,10 +41,24 @@
 
 ### Release install (intermediate)
 1. Clone the repo
-2. Go to `opera://extensions`
-3. Enable `Developer mode`
-4. Click `Load unpacked`
-5. Select the `gxmods` folder from the repo
+2. Go to `opera://mods/`
+3. Drag and drop a `.crx` from the `pre/` folder into oprea gx
+
+### Custom install (advanced)
+1. Clone the repo
+2. run `pip install -r requirements.txt`
+3. run `python generate.py`
+4. Go to `opera://extensions`
+5. Enable developer mode
+6. Click `Load unpacked`
+7. Select a folder within `dist/` folder which contains a `manifest.json` file
+
+## 🙋 FAQ
+Q: "Where is latte?"
+A: "A Light mode is required for all themes so choose your favorite dark theme and select light mode within the quick settings."
+
+Q: "Can I still use custom wallpapers?"
+A: "Yes, you can do this from the quick settings by enabling custom wallpapers."
 
 ## 💝 Thanks to
 
