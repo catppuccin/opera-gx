@@ -54,10 +54,10 @@
 7. Select a folder within `dist/` folder which contains a `manifest.json` file
 
 ## 🙋 FAQ
-Q: "Where is latte?"
+- Q: *Where is latte?*
 A: "A Light mode is required for all themes so choose your favorite dark theme and select light mode within the quick settings."
 
-Q: "Can I still use custom wallpapers?"
+- Q: *Can I still use custom wallpapers?*
 A: "Yes, you can do this from the quick settings by enabling custom wallpapers."
 
 ## 💝 Thanks to
