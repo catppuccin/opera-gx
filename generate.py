@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+from colorsys import rgb_to_hls
 import json, os, shutil
 from catppuccin import Flavour
 
@@ -86,31 +87,8 @@ def rgb_to_hsl(rgb):
     r = rgb[0] / 255
     g = rgb[1] / 255
     b = rgb[2] / 255
-    cmin = min(r,g,b)
-    cmax = max(r,g,b)
-    delta = cmax - cmin
-    h = 0
-    s = 0
-    l = 0
-    if (delta == 0):
-        h = 0
-    elif (cmax == r):
-        h = ((g - b) / delta) % 6
-    elif (cmax == g):
-        h = (b - r) / delta + 2
-    else:
-        h = (r - g) / delta + 4
-    h = round(h * 60)
-    if (h < 0):
-        h += 360
-    l = (cmax + cmin) / 2
-    if (delta == 0):
-        s = 0
-    else:
-        s = delta / (1 - abs(2 * l - 1))
-    s = round(+(s * 100))
-    l = round(+(l * 100))
-    return {"h": h, "s": s, "l": l}
+    hls = rgb_to_hls(r,g,b)
+    return {"h": int(hls[0] * 360), "s": int(hls[2] * 100), "l": int(hls[1] * 100)}
 
 def write():
     """Write the theme files to the specified path"""
