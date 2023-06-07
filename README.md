@@ -1,7 +1,7 @@
 <h3 align="center">
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-	Catppuccin for <a href="https://www.opera.com/gx">Oprea GX</a>
+	Catppuccin for <a href="https://www.opera.com/gx">Opera GX</a>
 	<img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -37,12 +37,12 @@
 ## Usage
 
 ### GX Store
-1. Download the from the [gx store](https://store.gx.me/mods/)
+1. Download GX Mods from the [gx store](https://store.gx.me/mods/)
 
 ### Release install (intermediate)
 1. Clone the repo
 2. Go to `opera://mods/`
-3. Drag and drop a `.crx` from the `pre/` folder into oprea gx
+3. Drag and drop a `.crx` from the `pre/` folder into Opera gx
 
 ### Custom install (advanced)
 1. Clone the repo
