@@ -84,10 +84,7 @@ def generate_themes():
 
 def rgb_to_hsl(rgb):
     """Convert rbg to hsl"""
-    r = rgb[0] / 255
-    g = rgb[1] / 255
-    b = rgb[2] / 255
-    hls = rgb_to_hls(r,g,b)
+    hls = rgb_to_hls(rgb[0] / 255, rgb[1] / 255, rgb[2] / 255)
     return {"h": int(hls[0] * 360), "s": int(hls[2] * 100), "l": int(hls[1] * 100)}
 
 def write():
