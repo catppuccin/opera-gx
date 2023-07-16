@@ -32,7 +32,7 @@ def generate_themes():
     for accent in accents:
         for theme, flavour in themes.items():
             base = {
-                "name": "Catppuccin for Opera GX",
+                "name": "Catppuccin " + theme + " " + accent,
                 "description": "Soothing pastel theme for Opera GX",
                 "version": "1.0",
                 "developer": {
