@@ -15,12 +15,12 @@ build: clean
     fi
 
     whiskers --list-accents -o plain | while read -r accent; do
-      dist="{{dist}}/$flavor/catppuccin-$flavor-$accent"
-      mkdir $dist/wallpapers/
-      cp templates/wallpapers/macchiato.png $dist/wallpapers/
-      cp templates/license.txt $dist
-      cp templates/icon_512.png $dist
-      cd $(dirname $dist) && zip -r ../catppuccin-$flavor-$accent.zip $(basename $dist)/* && cd -
+      current="{{dist}}/$flavor/catppuccin-$flavor-$accent"
+      mkdir $current/wallpapers/
+      cp templates/wallpapers/macchiato.png $current/wallpapers/
+      cp templates/license.txt $current
+      cp templates/icon_512.png $current
+      cd $(dirname $current) && zip -r ../catppuccin-$flavor-$accent.zip $(basename $current)/* && cd -
     done
     rm -rf {{dist}}/$flavor
   done
