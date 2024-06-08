@@ -1,0 +1,51 @@
+---
+whiskers:
+  version: "2.3.0"
+  matrix:
+   - flavor: [frappe, macchiato, mocha]
+   - accent
+  filename: "themes/{{ flavor.identifier }}/catppuccin-{{ flavor.identifier }}-{{ accent }}/manifest.json"
+---
+
+{%- macro hsl(color) -%}
+{ "h": {{ color.hsl.h }}, "s": {{ color.hsl.s * 100 | round }}, "l": {{ color.hsl.l * 100 | round }} }
+{%- endmacro -%}
+
+{%- set latte = flavors.latte.colors -%}
+
+{
+  "name": "Catppuccin for Opera GX",
+  "description": "Soothing pastel theme for Opera GX",
+  "version": "1.0",
+  "developer": { "name": "Catppuccin" },
+  "icons": { "512": "icon_512.png" },
+  "manifest_version": 3,
+  "mod": {
+    "license": "license.txt",
+    "schema_version": 1,
+    "payload": {
+      "theme": {
+        "dark": {
+          "gx_accent": {{ self::hsl(color=flavor.colors[accent]) }},
+          "gx_secondary_base": {{ self::hsl(color=base) }}
+        },
+        "light": {
+          "gx_accent": {{ self::hsl(color=latte[accent]) }},
+          "gx_secondary_base": {{ self::hsl(color=latte.base) }}
+        }
+      },
+      "wallpaper": {
+        "dark": {
+          "image": "wallpapers/macchiato.png",
+          "text_color": "#{{ text.hex }}",
+          "text_shadow": "#{{ crust.hex }}"
+        },
+        "light": {
+          "image": "wallpapers/macchiato.png",
+          "text_color": "#{{ latte.text.hex }}",
+          "text_shadow": "#{{ latte.crust.hex }}"
+        }
+      }
+    }
+  }
+}
