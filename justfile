@@ -22,4 +22,5 @@ build: clean
       cp templates/icon_512.png $dist
       cd $(dirname $dist) && zip -r ../catppuccin-$flavor-$accent.zip $(basename $dist)/* && cd -
     done
+    rm -rf {{dist}}/$flavor
   done
