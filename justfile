@@ -20,7 +20,7 @@ build: clean
       cp templates/wallpapers/macchiato.png $current/wallpapers/
       cp templates/license.txt $current
       cp templates/icon_512.png $current
-      cd $(dirname $current) && zip -r ../catppuccin-$flavor-$accent.zip $(basename $current)/* && cd -
+      cd $(dirname $current) && zip -r ../catppuccin-$flavor-$accent.crx $(basename $current)/* && cd -
     done
     rm -rf {{dist}}/$flavor
   done
