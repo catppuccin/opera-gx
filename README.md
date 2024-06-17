@@ -36,16 +36,29 @@
 
 ## Usage
 
-1. Go to `opera://mods/`.
-2. Drag and drop the flavor and accent combination of your choice from [`themes/`](./themes/) into Opera GX.
+### GX Store
+1. Download GX Mods from the [gx store](https://store.gx.me/mods/)
+
+### Release install (intermediate)
+1. Clone the repo
+2. Go to `opera://mods/`
+3. Drag and drop a `.crx` from the `pre/` folder into Opera gx
+
+### Custom install (advanced)
+1. Clone the repo
+2. run `pip install -r requirements.txt`
+3. run `python generate.py`
+4. Go to `opera://extensions`
+5. Enable developer mode
+6. Click `Load unpacked`
+7. Select a folder within `dist/` folder which contains a `manifest.json` file
 
 ## 🙋 FAQ
+- Q: *Where is latte?*
+A: "A Light mode is required for all themes so choose your favorite dark theme and select light mode within the quick settings."
 
-- Q: _Where is latte?_
-  A: "Latte is provided as the light mode variant of each dark flavor."
-
-- Q: _Can I still use custom wallpapers?_
-  A: "Yes, you can do this from the quick settings by enabling custom wallpapers."
+- Q: *Can I still use custom wallpapers?*
+A: "Yes, you can do this from the quick settings by enabling custom wallpapers."
 
 ## 💝 Thanks to
 
