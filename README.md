@@ -36,8 +36,11 @@
 
 ## Usage
 
-1. Go to `opera://mods/`.
-2. Drag and drop the flavor and accent combination of your choice from [`themes/`](./themes/) into Opera GX.
+1. Download your preferred flavor and accent combination from [`themes/`](./themes/).
+2. Unzip the downloaded asset from Step 1.
+3. Go to the `opera://extensions` page in Opera.
+4. Enable Developer Mode (if not already enabled) by flipping the toggle switch labeled **Developer mode**.
+5. Click the **Load unpacked** button and select the unzipped directory from Step 2.
 
 ## 🙋 FAQ
 
