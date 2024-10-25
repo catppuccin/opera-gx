@@ -4,7 +4,7 @@ _default:
 dist := "themes"
 
 clean:
-  rm -rfv {{dist}}/
+  rm -rf {{dist}}/
 
 build: clean
   #!/usr/bin/env bash
@@ -15,12 +15,12 @@ build: clean
     fi
 
     whiskers --list-accents -o plain | while read -r accent; do
-      current="{{dist}}/$flavor/catppuccin-$flavor-$accent"
+      current="{{dist}}/catppuccin-$flavor-$accent"
       mkdir $current/wallpapers/
       cp templates/wallpapers/macchiato.png $current/wallpapers/
       cp templates/license.txt $current
       cp templates/icon_512.png $current
-      cd $(dirname $current) && zip -r ../catppuccin-$flavor-$accent.crx $(basename $current)/* && cd -
+      cd $(dirname $current) && zip -r catppuccin-$flavor-$accent.zip $(basename $current)/* && cd -
+      rm -rf "$current"
     done
-    rm -rf {{dist}}/$flavor
   done
