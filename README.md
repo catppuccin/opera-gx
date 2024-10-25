@@ -36,7 +36,7 @@
 
 ## Usage
 
-1. Download your preferred flavor and accent combination from [`themes/`](./themes/).
+1. Download your preferred flavor and accent combination from [the latest release](https://github.com/catppuccin/opera-gx/releases/latest).
 2. Unzip the downloaded asset from Step 1.
 3. Go to the `opera://extensions` page in Opera.
 4. Enable Developer Mode (if not already enabled) by flipping the toggle switch labeled **Developer mode**.
