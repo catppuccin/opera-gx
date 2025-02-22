@@ -9,12 +9,12 @@ clean:
 build: clean
   #!/usr/bin/env bash
   whiskers templates/manifest.tera
-  whiskers --list-flavors -o plain | while read -r flavor; do
+  for flavor in $(whiskers --list-flavors -o plain); do
     if [ "$flavor" = "latte" ]; then
       continue
     fi
 
-    whiskers --list-accents -o plain | while read -r accent; do
+    for accent in $(whiskers --list-accents -o plain); do
       current="{{dist}}/catppuccin-$flavor-$accent"
       mkdir $current/wallpapers/
       cp templates/wallpapers/macchiato.png $current/wallpapers/
