@@ -4,7 +4,7 @@ whiskers:
   matrix:
    - flavor: [frappe, macchiato, mocha]
    - accent
-  filename: "themes/catppuccin-{{ flavor.identifier }}-{{ accent }}/manifest.json"
+  filename: "dist/catppuccin-{{ flavor.identifier }}-{{ accent }}/manifest.json"
 ---
 
 {%- macro hsl(color) -%}

@@ -1,7 +1,7 @@
 _default:
   @just --list
 
-dist := "themes"
+dist := "dist"
 
 clean:
   rm -rf {{dist}}/
