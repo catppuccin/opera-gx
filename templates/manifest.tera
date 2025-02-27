@@ -16,7 +16,7 @@ whiskers:
 {
   "name": "Catppuccin for Opera GX",
   "description": "Soothing pastel theme for Opera GX",
-  "version": "1.0",
+  "version": "2.0.0",
   "developer": { "name": "Catppuccin" },
   "icons": { "512": "icon_512.png" },
   "manifest_version": 3,
